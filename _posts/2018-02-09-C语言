@@ -1,0 +1,155 @@
+# C语言
+
+<u>基于《C Primer Plus》</u>
+
+## 安装编译器
+
+安装MinGW，并配置环境变量[^1]
+
+## 初步
+
+~~~c
+#include <stdio.h>/*这一命令相当于将stdio.h文件中所有内容都输入该行所在位置，stdio.h中包含了供编译器输入输出的函数，如printf（），#include是一条预处理命令*/
+int main(void)/*一切程序都从main()函数开始，int意味着该函数返回一个整数，main是函数名，void表示该函数不带参数*/
+{
+	int num;/*声明变量*/[^1]
+	num=1;
+	
+	printf("I am s simple ");
+	printf("computer.\n");
+	printf("My favourite number is %d because it is first.\n",num);/*\n表示换行，%d告诉计算机以何种形式 输出num，及打印的位置*/
+           
+    getchar()；/*这行代码会使程序在输出完以上文字后等待击键*/
+    return 0;/*有返回值的函数要有return语句*/
+	
+}
+~~~
+
+- C99之前要求声明变量必须在程序的顶部，C99可以在任意位置声明变量，但是许多编译器还不支持C99
+- 换行符是一个转义序列，转义序列用于代表难以表示或无法输入的字符。如：`\b` Backspace（退格），`\t` Tab
+- C语言的基本模块是**函数**
+- 多使用空格可提高程序的可读性
+- 通常在程序开始是写一条注释`//`给出文件名和程序目的
+
+
+
+```c
+//two_func.c  -- 一个文件中包含两个函数
+#include<stdio.h>
+void bulter(void);//函数原型，告知编译器要使用该函数
+int main(void)
+{
+	printf("I will summon the bulter function.\n");
+	bulter();//调用函数
+	printf("Yes.Bring me some tea and writeables DVDs.\n");
+	getchar();
+	
+    return 0;
+}
+void bulter(void)//函数定义
+{
+	printf("You rang,sir?\n");
+}
+```
+
+- `bulter()`出现了三次，第一次是函数原型(prototype),函数原型新增于C90；第二次函数调用；第三次函数定义
+
+## 数据和C
+
+```c
+//platinum.c -- your weight in platinum
+#include<stdio.h>
+int main(void)
+{
+	float weight;
+	float value;
+	
+	printf("Are you worth your weight in platinum?\n");
+	printf("Let's check it out. \n");
+	printf("Please enter your weight in pounds:");
+	
+	scanf("%f",&weight);
+	value=1700.0 * weight * 14.5833;
+	printf("Your weight in platinum is worth $%.2f.\n",value);
+	printf("You are easily worth that! If platinum prices drop,\n ");
+	printf("eat more to maintain your value.\n");
+	getchar();
+	getchar();
+	
+	return 0;	
+}
+```
+
+- `float`表示浮点数类型，浮点数通常只是实际值的近似值，因为实数是无限的.譬如7.00可能存储为6.9999
+- `%f`用于处理浮点数，`%.2f`控制输出小数点后两位
+- `scanf()`用于输入
+
+### 浮点数的存储
+
+计算机将浮点数分为小数部分和指数部分表示，且分开存储这两部分
+
+e.g.
+
+|  +   | .314159  |    1     |
+| :--: | :------: | :------: |
+| 符号 | 小数部分 | 指数部分 |
+
+以后会详细说明
+
+### int的打印
+
+`%d`为**转换说明**，指定`printf()`应用什么值来显示一个值（这里是十进制整数），格式化字符串中的每个`%d`斗鱼待打印列表中相应的`int`值相匹配，这个值可以是：
+
+- `int`类型的变量
+- `int`类型的常量
+- 任何值为`int`类型的表达式
+
+```c
+int a=1;
+int b=2;
+
+printf("%d minus %d is %d",a,2,a+b);
+```
+
+### 显示八进制和十六进制
+
+```c
+//显示八进制、十六进制
+#include<stdio.h>
+int main(void)
+{
+    int x;
+    scanf("%d",&x);
+    printf("dec = %d; octal = %O; hex = %x\n",x,x,x);
+    printf("dec = %d; octal = %#O; hex = %#x\n",x,x,x);/*hex是十六进制，octal是八进制*/
+    getchar();
+    getchar();
+    
+    return 0;
+}
+```
+
+### 多种整型
+
+一般情况下[^2]：
+
+- `long long`64位
+- `long`32位
+- `short`16位
+- `int`16位或32位
+- `unsigned int`通常用于计数
+
+相关的转换说明：
+
+- `%hd`十进制`short `
+- `%ho`八进制`short`
+- `%lx`十六进制`long`
+- `%u`用于`unsigned int`
+
+[^1]: https://www.jianshu.com/p/ce98139dc4ad
+
+[^2]: 其他整型中的int可写可不写
+
+
+
+ 
