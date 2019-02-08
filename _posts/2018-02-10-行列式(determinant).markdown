@@ -1,6 +1,6 @@
 <!-- 直接引入MathJax，使用Tex-MML-AM_HTLMorMML配置文件 -->
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
---------------------- 
+
 #  行列式(determinant)
 
 ## Why determinant?
