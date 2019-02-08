@@ -1,1 +1,1 @@
-$$ a!=b $$ 
+$$\begin{equation} a!=b \end{equation}$$
