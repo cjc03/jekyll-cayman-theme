@@ -1,0 +1,138 @@
+# Typora简易使用指南
+
+## 简介
+
+Typora是一款支持markdown的编辑器。
+
+## 删除线
+
+~~示例~~
+
+``` 
+~~content~~
+```
+
+## 代码
+
+- 使用“`”
+- 使用“```”
+- 使用“~~~”
+
+## 数学表达式
+
+~~~
+$$
+~~~
+
+回车即可输入tex代码
+
+## 表情
+
+``` 
+:content
+:happy
+:heart
+```
+
+## 下划线
+
+```
+<u>underline</u>
+```
+
+这是html中的语法
+
+## 加粗
+
+~~~
+**content**
+~~~
+
+## 下划线
+
+~~~
+*content*
+~~~
+
+## 无序列表
+
+~~~
+* content
+* content
+ * content
+~~~
+
+## 有序列表
+
+~~~
+1. content
+2. content
+~~~
+
+## 引用
+
+~~~
+> content
+~~~
+
+## 链接
+
+~~~
+[content](content)
+[点击此处](http://baidu.com)
+[content][2]
+[2]:
+~~~
+
+## 图片
+
+~~~
+![content](content)
+![content][1]
+[1]:content
+~~~
+
+## 脚注
+
+~~~
+content[^1]
+[^1]:content
+~~~
+
+## 表格
+
+~~~
+| 项目      |    价格 | 数量  |
+| :-------- | --------:| :--: |
+| Computer  | 1600 元 |  5   |
+| Phone     |   12 元 |  12  |
+| Pipe      |    1 元 | 234  |
+~~~
+
+冒号在左侧表示左对齐，右侧表示右对齐，两侧表示居中
+
+比较繁琐，建议直接使用快捷键ctrl+T
+
+## 分割线
+
+~~~
+---
+~~~
+
+## 生成目录
+
+~~~
+[toc]
+~~~
+
+
+
+<span style="color:grey">下载：[Typora](https://www.typora.io/)</span>
+
+**参考**：
+
+- [Markdown——入门指南](https://www.jianshu.com/p/1e402922ee32/)
+- [怎样使用Markdown](http://www.ituring.com.cn/article/23)
+- [Typora的使用](http://blog.csdn.net/qq_27035123/article/details/77574030?locationNum=3&fps=1)
+- [博客园「Markdown 编辑器」的语法规则](http://www.cnblogs.com/Pandaman/p/markdown.html)
+- [极简MarkDown排版介绍（How to）](http://www.cnblogs.com/math/p/se-tools-001.html)
