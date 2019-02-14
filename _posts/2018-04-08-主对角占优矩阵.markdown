@@ -1,0 +1,41 @@
+# 主对角占优矩阵
+
+矩阵$A=\left( \begin{matrix}{}\text{a}_{11}&\text{a}_{12}&\cdots&\text{a}_{1n}\\\text{a}_{21}&\text{a}_{22}&\cdots&\text{a}_{2n}\\\vdots&\vdots&\ddots&\vdots\\\text{a}_{n1}&\text{a}_{n2}&\cdots&\text{a}_{nn}\\\end{matrix} \right) $满足
+
+1)$|a_{ii}|>\sum_{j\ne i}^n{|a_{ij}|}$，则$\det A\ne0$.
+
+2)$a_{ii}>\sum_{j\ne i}^n{|a_{ij}|}$，则$\det A>0$.
+
+证明：
+
+1)
+
+$\det A\ne 0\ \ \Longleftrightarrow \ \ \text{线性方程组}AX=0\text{只有零解}$
+
+故假设存在非零解
+$$
+X=\left( \begin{matrix}{}
+	x_1&		x_2&		\cdots&		x_n\\
+\end{matrix} \right) ^T
+$$
+记$|x_i|=\max_j\left\{ |x_j| \right\} $，
+
+则|$a_{ii}x_i|\le \sum_{j\ne i}^{}{|a_{ij}||x_j|\le}|a_{ij}||x_i|\ \ \Rightarrow \ \ |a_{ii}|\le \sum_{j\ne i}^{}{|a_{ij}|}$，矛盾.
+
+2)
+
+记
+$$
+f\left( x \right) =\det A=\left| \begin{matrix}
+	\text{a}_{11}&		x\text{a}_{12}&		\cdots&		x\text{a}_{1n}\\
+	x\text{a}_{21}&		\text{a}_{22}&		\cdots&		x\text{a}_{2n}\\
+	\vdots&		\vdots&		\ddots&		\vdots\\
+	x\text{a}_{n1}&		x\text{a}_{n2}&		\cdots&		\text{a}_{nn}\\
+\end{matrix} \right|
+$$
+由1)知$|x|\le1$时$f(x)\ne0$，且$f(0)>0$，有连续性可知$f(1)>0$.
+
+
+
+
+
